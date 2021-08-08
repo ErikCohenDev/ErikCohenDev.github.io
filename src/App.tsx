@@ -41,7 +41,7 @@ const CALENDLY_URL = 'https://www.calendly.com/erik-cohen-dev';
 
 function App() {
   return (
-    <GA4R code={process.env.GA_ANALYTICS as string}>
+    <GA4R code={process.env.REACT_APP_GA_TOKEN as string}>
       <AppContainer className="App">
         <TagLine>
           Hello, I&apos;m <StyledName>Erik Cohen</StyledName>
