@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { GA4R } from 'ga-4-react';
 
 const StyledName = styled.span`
   color: #e31c6d;
@@ -41,20 +40,18 @@ const CALENDLY_URL = 'https://www.calendly.com/erik-cohen-dev';
 
 function App() {
   return (
-    <GA4R code={process.env.REACT_APP_GA_TOKEN as string}>
-      <AppContainer className="App">
-        <TagLine>
-          Hello, I&apos;m <StyledName>Erik Cohen</StyledName>
-        </TagLine>
-        <p style={{ maxWidth: '500px' }}>
-          I&apos;ve been developing react web applications for the past 10
-          years.&nbsp;I&apos;d like to learn more about your project.
-        </p>
-        <form method="get" action={CALENDLY_URL}>
-          <CTA type="submit">Set up a time to talk</CTA>
-        </form>
-      </AppContainer>
-    </GA4R>
+    <AppContainer className="App">
+      <TagLine>
+        Hello, I&apos;m <StyledName>Erik Cohen</StyledName>
+      </TagLine>
+      <p style={{ maxWidth: '500px' }}>
+        I&apos;ve been developing react web applications for the past 10
+        years.&nbsp;I&apos;d like to learn more about your project.
+      </p>
+      <form method="get" action={CALENDLY_URL}>
+        <CTA type="submit">Set up a time to talk</CTA>
+      </form>
+    </AppContainer>
   );
 }
 
